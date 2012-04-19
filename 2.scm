@@ -6,13 +6,6 @@
 (test-start "chapter 2")
 
 (f-test
- (lat? ['(Jack Sprat could eat no chicken fat) => #t]
-       ['((Jack) Sprat could eat no chicken fat) => #f]
-       ['(Jack (Sprat could) eat no chicken fat) => #f]
-       ['() => #t]
-       ['(bacon and eggs) => #t]
-       ['(bacon (and eggs)) => #f])
- 
  (or [(null? '()) (null? '(d e f g)) => #t]
      [(null? '(a b c)) (null? '()) => #t]
      [(null? '(a b c)) (null? '(atom)) => #f])
@@ -22,4 +15,11 @@
           ['meat '(mashed potatoes and meat gravy) => #t]
           ['liver '(bagels and lox) => #f]))
 
+ (lat? ['(Jack Sprat could eat no chicken fat) => #t]
+       ['((Jack) Sprat could eat no chicken fat) => #f]
+       ['(Jack (Sprat could) eat no chicken fat) => #f]
+       ['() => #t]
+       ['(bacon and eggs) => #t]
+       ['(bacon (and eggs)) => #f])
+ 
 (test-end)
