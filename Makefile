@@ -1,8 +1,7 @@
 test:
-	echo "" > test.log
-	gosh 1.scm >>test.log
-	gosh 2.scm >>test.log
-	gosh 3.scm >>test.log
+	./gosh_test.sh 1.scm
+	./gosh_test.sh 2.scm
+	./gosh_test.sh 3.scm
 
 clean:
 	rm -f *~ test.log
