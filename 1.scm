@@ -98,4 +98,7 @@
        #t
        (let1 l '(beans beans we need jelly beans) (eq? (car l) (car (cdr l)))))
 
+;; (test-section "fail")
+;; (test* "fail" #t #f)
+
 (test-end)
